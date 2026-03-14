@@ -1,0 +1,181 @@
+{
+  "generated_at_utc": "2026-03-13T19:14:20.805112+00:00",
+  "nominal_coverage": 0.8,
+  "comparison_csv_path": "reports\\horizon_quantile_gbr_calibrated\\conformal_calibration_comparison.csv",
+  "horizons": [
+    {
+      "horizon_label": "t_plus_1",
+      "conformal_adjustment_mw": 30.985831414285713,
+      "validation_raw_metrics": {
+        "point_metrics": {
+          "MAE": 98.30605083808493,
+          "RMSE": 132.92606793065752
+        },
+        "pinball_metrics": {
+          "pinball_q10": 22.918024185671136,
+          "pinball_q50": 49.153025419042464,
+          "pinball_q90": 25.972367502980088
+        },
+        "coverage_80_interval": 0.6880382775119617,
+        "average_interval_width": 280.31714373654194
+      },
+      "validation_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 98.30605083808493,
+          "RMSE": 132.92606793065752
+        },
+        "pinball_metrics": {
+          "pinball_q10": 23.297807121623066,
+          "pinball_q50": 49.153025419042464,
+          "pinball_q90": 23.932033595661522
+        },
+        "coverage_80_interval": 0.8009569377990431,
+        "average_interval_width": 342.28880656511336
+      },
+      "test_raw_metrics": {
+        "point_metrics": {
+          "MAE": 128.9621629861237,
+          "RMSE": 174.5878988686797
+        },
+        "pinball_metrics": {
+          "pinball_q10": 32.51730170438917,
+          "pinball_q50": 64.48108149306185,
+          "pinball_q90": 34.454152002471616
+        },
+        "coverage_80_interval": 0.6033519553072626,
+        "average_interval_width": 309.60610505173963
+      },
+      "test_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 128.9621629861237,
+          "RMSE": 174.5878988686797
+        },
+        "pinball_metrics": {
+          "pinball_q10": 31.734770669485997,
+          "pinball_q50": 64.48108149306185,
+          "pinball_q90": 30.70795122974061
+        },
+        "coverage_80_interval": 0.7048417132216015,
+        "average_interval_width": 371.577767880311
+      },
+      "validation_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_1\\validation_predictions_calibrated.csv",
+      "test_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_1\\test_predictions_calibrated.csv"
+    },
+    {
+      "horizon_label": "t_plus_24",
+      "conformal_adjustment_mw": 11.587535777091034,
+      "validation_raw_metrics": {
+        "point_metrics": {
+          "MAE": 100.86012957921517,
+          "RMSE": 132.00751893970505
+        },
+        "pinball_metrics": {
+          "pinball_q10": 24.28259933934363,
+          "pinball_q50": 50.430064789607584,
+          "pinball_q90": 23.971028883133002
+        },
+        "coverage_80_interval": 0.7586206896551724,
+        "average_interval_width": 329.35732325472105
+      },
+      "validation_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 100.86012957921517,
+          "RMSE": 132.00751893970505
+        },
+        "pinball_metrics": {
+          "pinball_q10": 24.65565370136012,
+          "pinball_q50": 50.430064789607584,
+          "pinball_q90": 23.345556058184922
+        },
+        "coverage_80_interval": 0.8007662835249042,
+        "average_interval_width": 352.5323948089031
+      },
+      "test_raw_metrics": {
+        "point_metrics": {
+          "MAE": 180.46889435548854,
+          "RMSE": 238.99302682365203
+        },
+        "pinball_metrics": {
+          "pinball_q10": 49.93240772911891,
+          "pinball_q50": 90.23444717774427,
+          "pinball_q90": 46.37899159356291
+        },
+        "coverage_80_interval": 0.5566127497621313,
+        "average_interval_width": 389.05494122679437
+      },
+      "test_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 180.46889435548854,
+          "RMSE": 238.99302682365203
+        },
+        "pinball_metrics": {
+          "pinball_q10": 49.12036433064526,
+          "pinball_q50": 90.23444717774427,
+          "pinball_q90": 44.511507375938976
+        },
+        "coverage_80_interval": 0.588011417697431,
+        "average_interval_width": 412.23001278097644
+      },
+      "validation_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_24\\validation_predictions_calibrated.csv",
+      "test_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_24\\test_predictions_calibrated.csv"
+    },
+    {
+      "horizon_label": "t_plus_168",
+      "conformal_adjustment_mw": 122.80695588423623,
+      "validation_raw_metrics": {
+        "point_metrics": {
+          "MAE": 164.60273615528249,
+          "RMSE": 226.51178695916525
+        },
+        "pinball_metrics": {
+          "pinball_q10": 35.59354163925104,
+          "pinball_q50": 82.30136807764124,
+          "pinball_q90": 62.938573651096334
+        },
+        "coverage_80_interval": 0.5436241610738255,
+        "average_interval_width": 325.139563385147
+      },
+      "validation_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 164.60273615528249,
+          "RMSE": 226.51178695916525
+        },
+        "pinball_metrics": {
+          "pinball_q10": 43.30445400227388,
+          "pinball_q50": 82.30136807764124,
+          "pinball_q90": 41.769941004937785
+        },
+        "coverage_80_interval": 0.8015340364333653,
+        "average_interval_width": 570.7534751536194
+      },
+      "test_raw_metrics": {
+        "point_metrics": {
+          "MAE": 398.237727563448,
+          "RMSE": 510.7549262773795
+        },
+        "pinball_metrics": {
+          "pinball_q10": 140.00688774468424,
+          "pinball_q50": 199.118863781724,
+          "pinball_q90": 51.72822036428931
+        },
+        "coverage_80_interval": 0.4889867841409692,
+        "average_interval_width": 494.4657237923999
+      },
+      "test_calibrated_metrics": {
+        "point_metrics": {
+          "MAE": 398.237727563448,
+          "RMSE": 510.7549262773795
+        },
+        "pinball_metrics": {
+          "pinball_q10": 100.77400227835308,
+          "pinball_q50": 199.118863781724,
+          "pinball_q90": 63.385805676922864
+        },
+        "coverage_80_interval": 0.6629955947136564,
+        "average_interval_width": 740.0796355608722
+      },
+      "validation_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_168\\validation_predictions_calibrated.csv",
+      "test_output_path": "reports\\horizon_quantile_gbr_calibrated\\t_plus_168\\test_predictions_calibrated.csv"
+    }
+  ]
+}
