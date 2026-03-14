@@ -1,0 +1,32 @@
+{
+  "generated_at_utc": "2026-03-13T19:52:51.455300+00:00",
+  "horizons": [
+    {
+      "horizon_label": "t_plus_1",
+      "lead_hours": 1,
+      "row_count": 8784,
+      "available_target_rows": 8715,
+      "missing_target_rows": 69,
+      "start_utc": "2024-01-01 00:00:00+00:00",
+      "end_utc": "2024-12-31 23:00:00+00:00"
+    },
+    {
+      "horizon_label": "t_plus_24",
+      "lead_hours": 24,
+      "row_count": 8784,
+      "available_target_rows": 8692,
+      "missing_target_rows": 92,
+      "start_utc": "2024-01-01 00:00:00+00:00",
+      "end_utc": "2024-12-31 23:00:00+00:00"
+    },
+    {
+      "horizon_label": "t_plus_168",
+      "lead_hours": 168,
+      "row_count": 8784,
+      "available_target_rows": 8548,
+      "missing_target_rows": 236,
+      "start_utc": "2024-01-01 00:00:00+00:00",
+      "end_utc": "2024-12-31 23:00:00+00:00"
+    }
+  ]
+}
