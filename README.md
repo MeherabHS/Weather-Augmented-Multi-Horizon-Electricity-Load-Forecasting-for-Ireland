@@ -119,50 +119,31 @@ The forecasting workflow consists of the following stages:
 
 ```text
 .
-Weather-Augmented-Multi-Horizon-Electricity-Load-Forecasting-for-Ireland/
-│
-├─ src/
-│   ├─ ingestion/
-│   │   └─ entsoe_ingestion.py
-│   │
-│   ├─ preprocessing/
-│   │   ├─ entsoe_preprocessing.py
-│   │   ├─ entsoe_quality_audit.py
-│   │   └─ entsoe_time_split.py
-│   │
-│   ├─ dataset_builder/
-│   │   ├─ entsoe_horizon_datasets.py
-│   │   ├─ entsoe_horizon_splits.py
-│   │   ├─ entsoe_weather_horizon_datasets.py
-│   │   └─ entsoe_weather_horizon_splits.py
-│   │
-│   ├─ models/
-│   │   ├─ entsoe_modeling_table.py
-│   │   └─ entsoe_weather_augmented_modeling_table.py
-│   │
-│   ├─ baselines/
-│   │   ├─ baseline_seasonal_naive.py
-│   │   ├─ baseline_sarimax.py
-│   │   ├─ baseline_quantile_gbr.py
-│   │   └─ baseline_model_report.py
-│   │
-│   └─ evaluation/
-│       ├─ final_model_comparison_report.py
-│       └─ forecast_task_spec.py
-│
-├─ reports/
-│   ├─ figures/
-│   │   ├─ figure_rmse_vs_horizon.py
-│   │   ├─ figure_interval_coverage.py
-│   │   ├─ figure_forecast_example.py
-│   │   └─ figure_forecast_vs_actual.py
-│   │
-│   └─ tables/
-│       └─ estimated_numbers.csv
-│
-├─ docs/
-│   ├─ forwarding_letter.docx
-│   └─ bns - Google Docs.pdf
+src/
+├── ingestion/
+├── preprocessing/
+├── dataset_builder/
+├── models/
+├── baselines/
+├── evaluation/
+└── visualization/
+    ├── figure_forecast_example.py
+    ├── figure_forecast_vs_actual.py
+    ├── figure_interval_coverage.py
+    └── figure_rmse_vs_horizon.py
+
+reports/
+├── figures/
+│   ├── rmse_vs_horizon.png
+│   ├── interval_coverage.png
+│   ├── forecast_vs_actual.png
+│   └── pipeline_architecture.png
+├── tables/
+│   ├── model_comparison_table.csv
+│   └── model_comparison_table.json
+├── baselines/
+├── calibrated/
+└── horizon_models/
 
 ```
 # Feature Engineering
