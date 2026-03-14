@@ -1,0 +1,35 @@
+{
+  "generated_at_utc": "2026-03-13T18:27:06.989232+00:00",
+  "source_modeling_input_path": "data\\modeling\\entsoe\\ireland_load_modeling_table.csv",
+  "split_policy": "Chronological split only; no random sampling.",
+  "boundaries": {
+    "train_end_utc": "2024-09-30 23:00:00+00:00",
+    "validation_start_utc": "2024-10-01 00:00:00+00:00",
+    "validation_end_utc": "2024-11-15 23:00:00+00:00",
+    "test_start_utc": "2024-11-16 00:00:00+00:00"
+  },
+  "summaries": {
+    "train": {
+      "row_count": 6513,
+      "start_utc": "2024-01-01 00:00:00+00:00",
+      "end_utc": "2024-09-30 23:00:00+00:00",
+      "target_missing_row_count": 0,
+      "wind_missing_row_count": 94
+    },
+    "validation": {
+      "row_count": 1101,
+      "start_utc": "2024-10-01 00:00:00+00:00",
+      "end_utc": "2024-11-15 23:00:00+00:00",
+      "target_missing_row_count": 0,
+      "wind_missing_row_count": 0
+    },
+    "test": {
+      "row_count": 1102,
+      "start_utc": "2024-11-16 00:00:00+00:00",
+      "end_utc": "2024-12-31 22:00:00+00:00",
+      "target_missing_row_count": 0,
+      "wind_missing_row_count": 0
+    }
+  },
+  "note": "Rows with missing target values were excluded before splitting to preserve supervised evaluation integrity."
+}
