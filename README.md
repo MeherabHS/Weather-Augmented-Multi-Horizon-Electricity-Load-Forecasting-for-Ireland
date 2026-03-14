@@ -119,7 +119,7 @@ The forecasting workflow consists of the following stages:
 
 ```text
 .
-electricity-load-forecasting-ireland/
+Weather-Augmented-Multi-Horizon-Electricity-Load-Forecasting-for-Ireland/
 │
 ├─ src/
 │   ├─ ingestion/
@@ -268,8 +268,7 @@ Shows empirical **80% interval coverage** for probabilistic models.
 
 ## Figure 3 — Forecast vs Actual Load
 
-
-![Interval Coverage](reports/figures/interval_coverage.png)
+![Forecast vs Actual](reports/figures/forecast_vs_actual.png)
 
 
 Illustrates actual electricity demand, median forecast, and uncertainty interval.
