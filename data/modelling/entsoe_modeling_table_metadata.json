@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-03-13T18:24:35.381546+00:00",
+  "source_load_input_path": "data\\processed\\entsoe\\ireland_load_hourly.csv",
+  "source_generation_input_path": "data\\processed\\entsoe\\ireland_generation_per_type_hourly.csv",
+  "wind_feature_source_psr_type": "B19",
+  "wind_feature_description": "ENTSO-E Wind Onshore",
+  "quality_summary": {
+    "row_count": 8784,
+    "target_missing_row_count": 68,
+    "wind_missing_row_count_after_fill": 98,
+    "trainable_row_count": 8716,
+    "start_utc": "2024-01-01 00:00:00+00:00",
+    "end_utc": "2024-12-31 23:00:00+00:00"
+  },
+  "note": "Target missing values are intentionally preserved for transparent exclusion during model training."
+}
