@@ -1,0 +1,39 @@
+{
+  "generated_at_utc": "2026-03-13T18:17:37.197674+00:00",
+  "source_step2_metadata_path": "data\\raw\\entsoe\\entsoe_run_metadata_20260313T181220Z.json",
+  "source_load_csv_path": "data\\raw\\entsoe\\ireland_load_20260313T181220Z.csv",
+  "source_generation_csv_path": "data\\raw\\entsoe\\ireland_generation_per_type_20260313T181220Z.csv",
+  "redacted_datasets": [
+    {
+      "dataset_name": "ireland_load",
+      "document_type": "A65",
+      "resolved_url": "https://web-api.tp.entsoe.eu/api?securityToken=REDACTED&documentType=A65&processType=A16&periodStart=202401010000&periodEnd=202412312300&outBiddingZone_Domain=10YIE-1001A00010"
+    },
+    {
+      "dataset_name": "ireland_generation_per_type",
+      "document_type": "A75",
+      "resolved_url": "https://web-api.tp.entsoe.eu/api?securityToken=REDACTED&documentType=A75&processType=A16&periodStart=202401010000&periodEnd=202412312300&in_Domain=10YIE-1001A00010"
+    }
+  ],
+  "quality_summary": {
+    "load_hourly_start_utc": "2024-01-01 00:00:00+00:00",
+    "load_hourly_end_utc": "2024-12-31 22:00:00+00:00",
+    "load_hourly_row_count": 8783,
+    "load_hourly_missing_values": 67,
+    "generation_hourly_start_utc": "2024-01-01 00:00:00+00:00",
+    "generation_hourly_end_utc": "2024-12-31 22:00:00+00:00",
+    "generation_hourly_row_count": 71388,
+    "generation_unique_psr_types": [
+      "B04",
+      "B05",
+      "B06",
+      "B08",
+      "B10",
+      "B11",
+      "B16",
+      "B19",
+      "B20"
+    ]
+  },
+  "note": "Wind subtype selection is intentionally deferred until actual psr_type labels are inspected."
+}

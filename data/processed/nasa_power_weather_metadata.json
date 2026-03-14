@@ -1,0 +1,31 @@
+{
+  "generated_at_utc": "2026-03-13T19:31:35.353193+00:00",
+  "source_system": "NASA POWER",
+  "resolved_url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=T2M%2CRH2M%2CWS10M%2CWD10M%2CPS%2CPRECTOTCORR%2CALLSKY_SFC_SW_DWN&community=RE&longitude=-6.2603&latitude=53.3498&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+  "raw_payload_path": "data\\raw\\weather\\nasa_power_weather_20260313T193129Z.json",
+  "processed_csv_path": "data\\processed\\weather\\nasa_power_weather_hourly.csv",
+  "row_count": 8784,
+  "start_utc": "2024-01-01 00:00:00+00:00",
+  "end_utc": "2024-12-31 23:00:00+00:00",
+  "parameters": [
+    "T2M",
+    "RH2M",
+    "WS10M",
+    "WD10M",
+    "PS",
+    "PRECTOTCORR",
+    "ALLSKY_SFC_SW_DWN"
+  ],
+  "available_columns": [
+    "nasa_hour_key",
+    "temp_2m_c",
+    "rel_humidity_2m_pct",
+    "wind_speed_10m_ms",
+    "wind_direction_10m_deg",
+    "surface_pressure_kpa",
+    "precipitation_mm_hr",
+    "allsky_surface_solar_downward_wm2",
+    "timestamp_utc"
+  ],
+  "note": "Single-point Dublin proxy weather ingestion for later merge with Irish load forecasting table."
+}
