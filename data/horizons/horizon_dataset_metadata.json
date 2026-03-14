@@ -1,0 +1,43 @@
+{
+  "generated_at_utc": "2026-03-13T18:51:08.829150+00:00",
+  "source_modeling_input_path": "data\\modeling\\entsoe\\ireland_load_modeling_table.csv",
+  "note": "These datasets correct the earlier task-framing drift by explicitly encoding t+1, t+24, and t+168 forecast targets.",
+  "horizons": [
+    {
+      "horizon_label": "t_plus_1",
+      "lead_hours": 1,
+      "output_path": "data\\horizons\\entsoe\\ireland_load_t_plus_1.csv",
+      "summary": {
+        "row_count": 8784,
+        "available_target_rows": 8715,
+        "missing_target_rows": 69,
+        "start_utc": "2024-01-01 00:00:00+00:00",
+        "end_utc": "2024-12-31 23:00:00+00:00"
+      }
+    },
+    {
+      "horizon_label": "t_plus_24",
+      "lead_hours": 24,
+      "output_path": "data\\horizons\\entsoe\\ireland_load_t_plus_24.csv",
+      "summary": {
+        "row_count": 8784,
+        "available_target_rows": 8692,
+        "missing_target_rows": 92,
+        "start_utc": "2024-01-01 00:00:00+00:00",
+        "end_utc": "2024-12-31 23:00:00+00:00"
+      }
+    },
+    {
+      "horizon_label": "t_plus_168",
+      "lead_hours": 168,
+      "output_path": "data\\horizons\\entsoe\\ireland_load_t_plus_168.csv",
+      "summary": {
+        "row_count": 8784,
+        "available_target_rows": 8548,
+        "missing_target_rows": 236,
+        "start_utc": "2024-01-01 00:00:00+00:00",
+        "end_utc": "2024-12-31 23:00:00+00:00"
+      }
+    }
+  ]
+}
