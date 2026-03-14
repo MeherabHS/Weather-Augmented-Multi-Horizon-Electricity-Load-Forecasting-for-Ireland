@@ -1,0 +1,22 @@
+{
+  "generated_at_utc": "2026-03-13T18:45:34.710615+00:00",
+  "best_point_model": {
+    "model_name": "gbr_deeper",
+    "model_family": "GradientBoostingRegressor_Quantile",
+    "test_rmse": 121.98190686920768,
+    "test_mae": 90.24533414724199
+  },
+  "best_probabilistic_model": {
+    "model_name": "gbr_deeper",
+    "model_family": "GradientBoostingRegressor_Quantile",
+    "test_pinball_q50": 45.122667073620995,
+    "test_coverage_80": 0.6886617100371747
+  },
+  "interpretation": {
+    "best_point_forecast_model": "gbr_deeper",
+    "best_probabilistic_model": "gbr_deeper",
+    "interval_calibration_assessment": "under-covered",
+    "summary_statement": "The strongest current point-forecast baseline is gbr_deeper, and the strongest probabilistic baseline is gbr_deeper. The observed 80% interval coverage is 0.6887, which is under-covered relative to the nominal target."
+  },
+  "comparison_csv_path": "reports\\baselines\\baseline_model_comparison.csv"
+}
