@@ -235,19 +235,31 @@ A probabilistic deep learning model trained to test whether a sequence model cou
 
 ## Figure 1 — RMSE vs Forecast Horizon
 
+![RMSE vs Horizon](reports/figures/rmse_vs_horizon.png)
+
 
 
 Shows comparative forecast error across all evaluated models.
 
 ## Figure 2 — Prediction Interval Coverage
 
+![Interval Coverage](reports/figures/interval_coverage.png)
+
+
 Shows empirical **80% interval coverage** for probabilistic models.
 
 ## Figure 3 — Forecast vs Actual Load
 
+
+![Interval Coverage](reports/figures/interval_coverage.png)
+
+
 Illustrates actual electricity demand, median forecast, and uncertainty interval.
 
 ## Figure 4 — Forecasting Pipeline Architecture
+
+
+![Forecasting Pipeline Architecture](reports/figures/pipeline_architecture.png)
 
 Summarizes the full system workflow.
 
