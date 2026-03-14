@@ -1,0 +1,35 @@
+{
+  "run_generated_at_utc": "2026-03-13T18:12:57.432717+00:00",
+  "datasets": [
+    {
+      "dataset_name": "ireland_load",
+      "document_type": "A65",
+      "process_type": "A16",
+      "area_param_name": "outBiddingZone_Domain",
+      "area_code": "10YIE-1001A00010",
+      "period_start": "202401010000",
+      "period_end": "202412312300",
+      "downloaded_at_utc": "2026-03-13T18:12:27.095683+00:00",
+      "resolved_url": "https://web-api.tp.entsoe.eu/api?securityToken=45cad363-ccff-478d-a611-32d1793b4470&documentType=A65&processType=A16&periodStart=202401010000&periodEnd=202412312300&outBiddingZone_Domain=10YIE-1001A00010",
+      "raw_xml_path": "data\\raw\\entsoe\\ireland_load_20260313T181220Z.xml",
+      "normalized_csv_path": "data\\raw\\entsoe\\ireland_load_20260313T181220Z.csv",
+      "row_count": 17430,
+      "note": "Timestamps are not yet reconstructed from period_start, resolution, and position; that is Step 3."
+    },
+    {
+      "dataset_name": "ireland_generation_per_type",
+      "document_type": "A75",
+      "process_type": "A16",
+      "area_param_name": "in_Domain",
+      "area_code": "10YIE-1001A00010",
+      "period_start": "202401010000",
+      "period_end": "202412312300",
+      "downloaded_at_utc": "2026-03-13T18:12:57.432353+00:00",
+      "resolved_url": "https://web-api.tp.entsoe.eu/api?securityToken=45cad363-ccff-478d-a611-32d1793b4470&documentType=A75&processType=A16&periodStart=202401010000&periodEnd=202412312300&in_Domain=10YIE-1001A00010",
+      "raw_xml_path": "data\\raw\\entsoe\\ireland_generation_per_type_20260313T181220Z.xml",
+      "normalized_csv_path": "data\\raw\\entsoe\\ireland_generation_per_type_20260313T181220Z.csv",
+      "row_count": 144194,
+      "note": "Timestamps are not yet reconstructed from period_start, resolution, and position; that is Step 3."
+    }
+  ]
+}
