@@ -119,32 +119,50 @@ The forecasting workflow consists of the following stages:
 
 ```text
 .
-├── data/
-│   ├── raw/
-│   ├── processed/
-│   ├── modeling/
-│   ├── modeling_weather/
-│   ├── horizons/
-│   ├── horizons_weather/
-│   ├── splits/
-│   └── splits_weather/
+electricity-load-forecasting-ireland/
 │
-├── models/
-│   ├── horizon_quantile_gbr/
-│   ├── horizon_quantile_gbr_weather/
-│   └── horizon_deepar_weather/
+├─ src/
+│   ├─ ingestion/
+│   │   └─ entsoe_ingestion.py
+│   │
+│   ├─ preprocessing/
+│   │   ├─ entsoe_preprocessing.py
+│   │   ├─ entsoe_quality_audit.py
+│   │   └─ entsoe_time_split.py
+│   │
+│   ├─ dataset_builder/
+│   │   ├─ entsoe_horizon_datasets.py
+│   │   ├─ entsoe_horizon_splits.py
+│   │   ├─ entsoe_weather_horizon_datasets.py
+│   │   └─ entsoe_weather_horizon_splits.py
+│   │
+│   ├─ models/
+│   │   ├─ entsoe_modeling_table.py
+│   │   └─ entsoe_weather_augmented_modeling_table.py
+│   │
+│   ├─ baselines/
+│   │   ├─ baseline_seasonal_naive.py
+│   │   ├─ baseline_sarimax.py
+│   │   ├─ baseline_quantile_gbr.py
+│   │   └─ baseline_model_report.py
+│   │
+│   └─ evaluation/
+│       ├─ final_model_comparison_report.py
+│       └─ forecast_task_spec.py
 │
-├── reports/
-│   ├── model_comparison_table.csv
-│   ├── model_comparison_table.json
-│   └── figures/
-│       ├── rmse_vs_horizon.png
-│       ├── interval_coverage.png
-│       ├── forecast_vs_actual.png
-│       └── pipeline_architecture.png
+├─ reports/
+│   ├─ figures/
+│   │   ├─ figure_rmse_vs_horizon.py
+│   │   ├─ figure_interval_coverage.py
+│   │   ├─ figure_forecast_example.py
+│   │   └─ figure_forecast_vs_actual.py
+│   │
+│   └─ tables/
+│       └─ estimated_numbers.csv
 │
-├── *.py
-└── README.md
+├─ docs/
+│   ├─ forwarding_letter.docx
+│   └─ bns - Google Docs.pdf
 
 ```
 # Feature Engineering
