@@ -147,3 +147,174 @@ The forecasting workflow consists of the following stages:
 └── README.md
 
 ```
+# Feature Engineering
+
+The forecasting table includes the following feature groups.
+
+## Calendar Features
+
+- hour_of_day
+- day_of_week
+- month
+- day_of_year
+
+## Cyclical Encodings
+
+- sin_hour, cos_hour
+- sin_dow, cos_dow
+- sin_month, cos_month
+
+## Lag Features
+
+- load_lag_1
+- load_lag_24
+- load_lag_48
+- load_lag_168
+
+## Rolling Features
+
+- load_rollmean_24
+- load_rollstd_24
+
+## Weather Features
+
+- temperature
+- wind speed
+- solar radiation
+- wind generation indicators
+
+---
+
+# Models Evaluated
+
+## 1. Seasonal Naive
+
+Used as the simplest benchmark. This establishes a minimum acceptable forecasting baseline.
+
+## 2. SARIMAX
+
+Used as the primary statistical baseline. This provides a classical time-series benchmark.
+
+## 3. Quantile GBR
+
+A machine learning model designed to produce both point forecasts and prediction intervals.
+
+## 4. Quantile GBR + Weather
+
+The final best-performing model. This model augments the structured forecasting table with meteorological variables.
+
+## 5. DeepAR + Weather
+
+A probabilistic deep learning model trained to test whether a sequence model could outperform tree-based methods.
+
+---
+
+# Final Results
+
+## RMSE Comparison
+
+| Horizon | DeepAR + Weather | GBR | GBR + Weather |
+|--------|------------------|-----|---------------|
+| t+1 | 609.88 | 174.59 | 166.48 |
+| t+24 | 602.30 | 238.99 | 232.42 |
+| t+168 | 535.60 | 510.75 | 455.78 |
+
+---
+
+# Key Findings
+
+- Weather covariates improve forecasting accuracy at all horizons.
+- The largest improvement appears at the **t+168 horizon**.
+- Gradient Boosting outperforms both **SARIMAX and DeepAR** in this structured forecasting setting.
+- DeepAR underperforms substantially, likely because the dataset is relatively small for deep sequence modeling.
+- Probabilistic interval coverage remains below the nominal **80% target**, indicating under-calibrated uncertainty estimates.
+
+---
+
+# Figures
+
+## Figure 1 — RMSE vs Forecast Horizon
+
+
+
+Shows comparative forecast error across all evaluated models.
+
+## Figure 2 — Prediction Interval Coverage
+
+Shows empirical **80% interval coverage** for probabilistic models.
+
+## Figure 3 — Forecast vs Actual Load
+
+Illustrates actual electricity demand, median forecast, and uncertainty interval.
+
+## Figure 4 — Forecasting Pipeline Architecture
+
+Summarizes the full system workflow.
+
+---
+
+# Interpretation
+
+## Why GBR Performed Best
+
+Gradient Boosting performs well on structured tabular datasets with engineered features. This project uses extensive lag, calendar, rolling, and weather variables, which are well suited to tree-based ensemble learning.
+
+## Why DeepAR Performed Poorly
+
+DeepAR is a probabilistic recurrent model that typically benefits from:
+
+- longer historical series
+- larger datasets
+- stronger sequence-driven structures
+
+This project used one year of hourly data and a strong engineered-feature representation, which favored tabular machine learning models over deep sequence models.
+
+## Why Weather Helped More at Longer Horizons
+
+At very short horizons, recent demand lags already contain strong predictive signal. At longer horizons, that information weakens, and weather variables become more valuable because they provide forward-looking environmental context.
+
+---
+
+# Limitations
+
+This study has several limitations:
+
+- only one year of data was used
+- the weather variable set was limited
+- interval calibration remained weak
+- DeepAR was not exhaustively tuned
+- the study focused on a single region (Ireland)
+
+---
+
+# Future Work
+
+Potential extensions include:
+
+- additional weather variables such as humidity and precipitation
+- conformal or post-hoc interval calibration
+- transformer-based forecasting models
+- multi-region forecasting
+- feature importance or SHAP-based interpretability analysis
+
+---
+
+# Reproducibility
+
+## Recommended Environment
+
+- Python 3.13
+- pandas
+- numpy
+- matplotlib
+- scikit-learn
+- statsmodels
+- requests
+- gluonts
+- torch
+
+## Example Setup
+
+```bash
+pip install pandas numpy matplotlib scikit-learn statsmodels requests gluonts
+```
