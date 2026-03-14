@@ -1,0 +1,101 @@
+{
+  "generated_at_utc": "2026-03-13T19:09:34.198782+00:00",
+  "comparison_csv_path": "reports\\horizon_quantile_gbr\\horizon_comparison.csv",
+  "interpretation": {
+    "best_horizon_by_test_rmse": {
+      "horizon_label": "t_plus_1",
+      "lead_hours": 1,
+      "test_rmse": 174.5878988686797,
+      "test_mae": 128.9621629861237
+    },
+    "worst_horizon_by_test_rmse": {
+      "horizon_label": "t_plus_168",
+      "lead_hours": 168,
+      "test_rmse": 510.7549262773795,
+      "test_mae": 398.237727563448
+    },
+    "calibration_by_horizon": [
+      {
+        "horizon_label": "t_plus_1",
+        "lead_hours": 1,
+        "test_coverage_80": 0.6033519553072626,
+        "calibration_assessment": "under-covered"
+      },
+      {
+        "horizon_label": "t_plus_24",
+        "lead_hours": 24,
+        "test_coverage_80": 0.5566127497621313,
+        "calibration_assessment": "under-covered"
+      },
+      {
+        "horizon_label": "t_plus_168",
+        "lead_hours": 168,
+        "test_coverage_80": 0.4889867841409692,
+        "calibration_assessment": "under-covered"
+      }
+    ],
+    "summary_statement": "The strongest horizon-specific baseline is t_plus_1 with test RMSE 174.59, while the weakest is t_plus_168 with test RMSE 510.75. All 80% prediction intervals are under-covered, indicating that the current quantile model is stronger as a point forecaster than as a calibrated probabilistic forecaster."
+  },
+  "horizons": [
+    {
+      "horizon_label": "t_plus_1",
+      "lead_hours": 1,
+      "selected_model_name": "gbr_deeper",
+      "model_family": "GradientBoostingRegressor_Quantile",
+      "validation_mae": 98.30605083808494,
+      "validation_rmse": 132.92606793065752,
+      "validation_pinball_q10": 22.918024185671136,
+      "validation_pinball_q50": 49.15302541904247,
+      "validation_pinball_q90": 25.97236750298009,
+      "validation_coverage_80": 0.6880382775119617,
+      "test_mae": 128.9621629861237,
+      "test_rmse": 174.5878988686797,
+      "test_pinball_q10": 32.51730170438917,
+      "test_pinball_q50": 64.48108149306185,
+      "test_pinball_q90": 34.454152002471616,
+      "test_coverage_80": 0.6033519553072626,
+      "source_summary_path": "models\\horizon_quantile_gbr\\t_plus_1\\summary.json",
+      "test_calibration_assessment": "under-covered"
+    },
+    {
+      "horizon_label": "t_plus_24",
+      "lead_hours": 24,
+      "selected_model_name": "gbr_deeper",
+      "model_family": "GradientBoostingRegressor_Quantile",
+      "validation_mae": 100.86012957921518,
+      "validation_rmse": 132.00751893970505,
+      "validation_pinball_q10": 24.28259933934363,
+      "validation_pinball_q50": 50.43006478960759,
+      "validation_pinball_q90": 23.971028883133,
+      "validation_coverage_80": 0.7586206896551724,
+      "test_mae": 180.46889435548854,
+      "test_rmse": 238.993026823652,
+      "test_pinball_q10": 49.932407729118914,
+      "test_pinball_q50": 90.23444717774427,
+      "test_pinball_q90": 46.378991593562915,
+      "test_coverage_80": 0.5566127497621313,
+      "source_summary_path": "models\\horizon_quantile_gbr\\t_plus_24\\summary.json",
+      "test_calibration_assessment": "under-covered"
+    },
+    {
+      "horizon_label": "t_plus_168",
+      "lead_hours": 168,
+      "selected_model_name": "gbr_small",
+      "model_family": "GradientBoostingRegressor_Quantile",
+      "validation_mae": 164.6027361552825,
+      "validation_rmse": 226.51178695916525,
+      "validation_pinball_q10": 35.59354163925104,
+      "validation_pinball_q50": 82.30136807764126,
+      "validation_pinball_q90": 62.93857365109635,
+      "validation_coverage_80": 0.5436241610738255,
+      "test_mae": 398.237727563448,
+      "test_rmse": 510.7549262773795,
+      "test_pinball_q10": 140.0068877446842,
+      "test_pinball_q50": 199.118863781724,
+      "test_pinball_q90": 51.72822036428931,
+      "test_coverage_80": 0.4889867841409692,
+      "source_summary_path": "models\\horizon_quantile_gbr\\t_plus_168\\summary.json",
+      "test_calibration_assessment": "under-covered"
+    }
+  ]
+}
