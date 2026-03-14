@@ -1,0 +1,106 @@
+{
+  "generated_at_utc": "2026-03-13T18:54:13.657707+00:00",
+  "split_policy": "Chronological split only; no random sampling.",
+  "boundaries": {
+    "train_end_utc": "2024-09-30 23:00:00+00:00",
+    "validation_start_utc": "2024-10-01 00:00:00+00:00",
+    "validation_end_utc": "2024-11-15 23:00:00+00:00",
+    "test_start_utc": "2024-11-16 00:00:00+00:00"
+  },
+  "note": "These splits are built from explicit t+1, t+24, and t+168 supervised horizon datasets.",
+  "horizons": [
+    {
+      "horizon_label": "t_plus_1",
+      "lead_hours": 1,
+      "input_path": "data\\horizons\\entsoe\\ireland_load_t_plus_1.csv",
+      "train_output_path": "data\\splits_horizon\\entsoe\\t_plus_1\\train.csv",
+      "validation_output_path": "data\\splits_horizon\\entsoe\\t_plus_1\\validation.csv",
+      "test_output_path": "data\\splits_horizon\\entsoe\\t_plus_1\\test.csv",
+      "summaries": {
+        "train": {
+          "row_count": 6513,
+          "start_utc": "2024-01-01 00:00:00+00:00",
+          "end_utc": "2024-09-30 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 94
+        },
+        "validation": {
+          "row_count": 1101,
+          "start_utc": "2024-10-01 00:00:00+00:00",
+          "end_utc": "2024-11-15 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        },
+        "test": {
+          "row_count": 1101,
+          "start_utc": "2024-11-16 00:00:00+00:00",
+          "end_utc": "2024-12-31 21:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        }
+      }
+    },
+    {
+      "horizon_label": "t_plus_24",
+      "lead_hours": 24,
+      "input_path": "data\\horizons\\entsoe\\ireland_load_t_plus_24.csv",
+      "train_output_path": "data\\splits_horizon\\entsoe\\t_plus_24\\train.csv",
+      "validation_output_path": "data\\splits_horizon\\entsoe\\t_plus_24\\validation.csv",
+      "test_output_path": "data\\splits_horizon\\entsoe\\t_plus_24\\test.csv",
+      "summaries": {
+        "train": {
+          "row_count": 6513,
+          "start_utc": "2024-01-01 00:00:00+00:00",
+          "end_utc": "2024-09-30 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 94
+        },
+        "validation": {
+          "row_count": 1101,
+          "start_utc": "2024-10-01 00:00:00+00:00",
+          "end_utc": "2024-11-15 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        },
+        "test": {
+          "row_count": 1078,
+          "start_utc": "2024-11-16 00:00:00+00:00",
+          "end_utc": "2024-12-30 22:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        }
+      }
+    },
+    {
+      "horizon_label": "t_plus_168",
+      "lead_hours": 168,
+      "input_path": "data\\horizons\\entsoe\\ireland_load_t_plus_168.csv",
+      "train_output_path": "data\\splits_horizon\\entsoe\\t_plus_168\\train.csv",
+      "validation_output_path": "data\\splits_horizon\\entsoe\\t_plus_168\\validation.csv",
+      "test_output_path": "data\\splits_horizon\\entsoe\\t_plus_168\\test.csv",
+      "summaries": {
+        "train": {
+          "row_count": 6513,
+          "start_utc": "2024-01-01 00:00:00+00:00",
+          "end_utc": "2024-09-30 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 94
+        },
+        "validation": {
+          "row_count": 1100,
+          "start_utc": "2024-10-01 00:00:00+00:00",
+          "end_utc": "2024-11-15 23:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        },
+        "test": {
+          "row_count": 935,
+          "start_utc": "2024-11-16 00:00:00+00:00",
+          "end_utc": "2024-12-24 22:00:00+00:00",
+          "target_missing_row_count": 0,
+          "wind_missing_row_count": 0
+        }
+      }
+    }
+  ]
+}
