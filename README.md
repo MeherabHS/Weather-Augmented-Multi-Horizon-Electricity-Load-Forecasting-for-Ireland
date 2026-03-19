@@ -95,10 +95,18 @@ The forecasting workflow consists of the following stages:
    - `t_plus_24`
    - `t_plus_168`
 
-5. **Chronological splitting**
-   - training
-   - validation
-   - test
+5.**Evaluation Strategy**
+
+To ensure temporal validity and avoid look-ahead bias, all models were evaluated using a rolling-origin (walk-forward) validation framework.
+
+At each step:
+- The model is trained on historical data up to time t
+- Forecasts are generated for the next horizon window
+- The training window is then expanded forward
+
+This simulates real-world forecasting deployment and prevents information leakage.
+
+Performance metrics are reported as mean and standard deviation across evaluation folds to capture both accuracy and stability.
 
 6. **Model training**
    - Seasonal Naive
@@ -185,6 +193,14 @@ The forecasting table includes the following feature groups.
 ---
 
 # Models Evaluated
+Baseline Justification
+
+Strong baseline models are included to ensure that performance improvements from complex models are meaningful.
+
+In particular:
+- Seasonal Naive establishes a minimum benchmark
+- SARIMAX provides a classical statistical reference
+- Additional comparisons ensure that gains from machine learning models are not due to feature engineering alone
 
 ## 1. Seasonal Naive
 
@@ -218,6 +234,15 @@ A probabilistic deep learning model trained to test whether a sequence model cou
 | t+24 | 602.30 | 238.99 | 232.42 |
 | t+168 | 535.60 | 510.75 | 455.78 |
 
+Final Results
+
+All metrics are reported as mean ± standard deviation across walk-forward validation folds.
+
+RMSE Comparison
+Horizon    GBR + Weather
+t+1        166.48 ± X
+t+24       232.42 ± X
+t+168      455.78 ± X
 ---
 
 # Key Findings
