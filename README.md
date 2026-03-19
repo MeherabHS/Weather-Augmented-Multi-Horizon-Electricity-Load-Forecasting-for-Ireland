@@ -290,6 +290,18 @@ Summarizes the full system workflow.
 
 # Interpretation
 
+
+**Failure Analysis**
+
+Despite strong overall performance, the model exhibits reduced accuracy under specific conditions:
+
+- Peak demand periods show systematic underprediction, likely due to insufficient representation of extreme load spikes in training data
+- Long-horizon forecasts (t+168) demonstrate higher variance, reflecting compounding uncertainty
+- Sudden demand shifts are not fully captured by lag-based features
+
+These limitations highlight the need for improved modeling of extreme events and uncertainty calibration.
+
+
 ## Why GBR Performed Best
 
 Gradient Boosting performs well on structured tabular datasets with engineered features. This project uses extensive lag, calendar, rolling, and weather variables, which are well suited to tree-based ensemble learning.
